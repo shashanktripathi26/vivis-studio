@@ -29,7 +29,9 @@ export default function SlideCanvas({ slide, index, total, palette, format, font
   const isLast  = index === total - 1
   const emoji   = slide.emoji || getEmoji(index, total)
 
-  const aspectClass = format === 'story' ? styles.story : format === 'landscape' ? styles.landscape : styles.square
+  const aspectClass = format === 'story'
+      ? styles.story
+     : styles.square
 
   const badge = isFirst
     ? <span className={styles.badge} style={{ background: pal.accent, color: ['pastel','berry'].includes(palette) ? '#fff' : '#0D0D1A' }}>SWIPE →</span>
