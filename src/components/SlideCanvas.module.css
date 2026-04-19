@@ -1,0 +1,93 @@
+.canvas {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  padding: 44px 36px;
+}
+
+.square   { aspect-ratio: 1/1; }
+.story    { aspect-ratio: 9/16; max-width: 320px; margin: 0 auto; }
+.landscape{ aspect-ratio: 16/9; }
+
+.orb1 {
+  position: absolute; width: 340px; height: 340px;
+  border-radius: 50%; opacity: 0.1;
+  top: -100px; right: -100px;
+  filter: blur(50px); pointer-events: none;
+}
+.orb2 {
+  position: absolute; width: 220px; height: 220px;
+  border-radius: 50%; opacity: 0.07;
+  bottom: -70px; left: -70px;
+  filter: blur(40px); pointer-events: none;
+}
+
+.counter {
+  position: absolute; top: 16px; right: 16px;
+  background: rgba(0,0,0,0.22);
+  border-radius: 100px; padding: 4px 12px;
+  font-size: 11px; color: rgba(255,255,255,0.75);
+  font-family: var(--font-body); font-weight: 600;
+  backdrop-filter: blur(8px);
+}
+
+.content {
+  position: relative; z-index: 1;
+  text-align: center; width: 100%;
+  max-width: 480px;
+  display: flex; flex-direction: column; align-items: center;
+}
+
+.badgeWrap { margin-bottom: 16px; }
+.badge {
+  font-size: 10px; font-weight: 800;
+  padding: 5px 14px; border-radius: 100px;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  font-family: var(--font-body);
+}
+.badgeOutline {
+  font-size: 10px; font-weight: 700;
+  padding: 5px 14px; border-radius: 100px;
+  letter-spacing: 1px;
+  border: 1.5px solid;
+  background: rgba(255,255,255,0.07);
+  font-family: var(--font-body);
+}
+
+.emoji {
+  font-size: 50px; margin-bottom: 16px;
+  display: block; line-height: 1;
+}
+
+.headline {
+  font-size: clamp(19px, 3.5vw, 30px);
+  font-weight: 800; line-height: 1.15;
+  margin-bottom: 14px;
+  letter-spacing: -0.4px;
+  word-break: break-word;
+  cursor: text; min-height: 1em; width: 100%;
+}
+
+.subtext {
+  font-family: var(--font-body);
+  font-size: clamp(12px, 1.8vw, 15px);
+  line-height: 1.7;
+  max-width: 360px; margin: 0 auto;
+  cursor: text; min-height: 1em;
+  font-weight: 400;
+}
+
+.body {
+  margin-top: 18px; padding: 13px 18px;
+  border-radius: 14px; font-family: var(--font-body);
+  font-size: 12px; border: 1px solid;
+  line-height: 1.6; cursor: text; min-height: 1em;
+  width: 100%; max-width: 380px;
+}
+
+.accentLine {
+  width: 38px; height: 3px;
+  border-radius: 2px; margin-top: 22px;
+  opacity: 0.75;
+}
