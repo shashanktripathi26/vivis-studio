@@ -30,7 +30,7 @@ export default function SlideCanvas({ slide, index, total, palette, format, font
   const emoji   = slide.emoji || getEmoji(index, total)
 
   const aspectClass = format === 'story'
-      ? styles.story
+     ? styles.story
      : styles.square
 
   const badge = isFirst
